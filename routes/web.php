@@ -15,4 +15,4 @@
 //     return view('welcome');
 // });
 
-Route::get('/folders/{id}/tasks', 'TaskController@index')->name('Tasks.index');
+Route::get('/folders/{id}/tasks', 'TaskController@index')->name('tasks.index');
