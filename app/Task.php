@@ -24,7 +24,6 @@ class Task extends Model
         //状態値
         $status = $this->attributes['status'];
         
-        
 
 
         // 定義されていない場合空文字を返すように。
