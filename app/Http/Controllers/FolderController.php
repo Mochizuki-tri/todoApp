@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Folder;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\CreateFolder;
 use Illuminate\Http\Request;
 
@@ -20,6 +21,8 @@ class FolderController extends Controller
         $folder = new Folder();
         // タイトルに入力値を代入する
         $folder->title = $request->title;
+        //userに紐づけ保存。 
+        Auth::user()->folders()->save($folder);
 
         $folder->save();
 
