@@ -38,6 +38,7 @@ class Task extends Model
         ->format('Y/m/d');
     }
 
+    // to show the label status(get and attribute are required)
     public function getStatusLabelAttribute()
     {
         $status = $this->attributes['status'];  
