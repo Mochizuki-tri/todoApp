@@ -21,7 +21,6 @@ class Task extends Model
     */
     public function getStatusClassAttribute()
     {
-        //状態値
         $status = $this->attributes['status'];
         
 
@@ -39,5 +38,12 @@ class Task extends Model
         ->format('Y/m/d');
     }
 
+    public function getStatusLabelAttribute()
+    {
+        $status = $this->attributes['status'];  
+        if (!isset(self::STATUS[$status])) 
+            return '';
+        return self::STATUS[$status]['label'];
+     }
 
 }

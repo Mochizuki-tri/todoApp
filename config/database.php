@@ -32,6 +32,12 @@ return [
     */
 
     'connections' => [
+        //  この設定を追加しました望月ダニエル。
+    'sqlite_testing' => [
+        'driver' => 'sqlite',
+        'database' => ':memory:',
+        'prefix' => '',
+    ],
 
         'sqlite' => [
             'driver' => 'sqlite',
